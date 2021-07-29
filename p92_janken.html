@@ -3,14 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>じゃんけん</title>
-  <script></script>
+  <script type="text/javascript" src="p92_judgement.js"></script>
+  <script>
+    function init() {
+      // OK押されなかったらボタンを無効化
+      if (!confirm("じゃんけんしますか？")) {
+        document.getElementById("btnG").disabled = true;
+        document.getElementById("btnC").disabled = true;
+        document.getElementById("btnP").disabled = true;
+      }
+    }
+
+    // じゃんけんの結果を表示する
+    function myChoice(jankenUser) {
+      var strLocal = myResult(jankenUser)
+      alert(strLocal);
+    }
+  </script>
 </head>
 
-<body>
-
+<body onload="init()">
+  <form name="form1">
+    <input type="button" id="btnG" onclick="myChoice(0)" value="グー ">
+    <input type="button" id="btnC" onclick="myChoice(1)" value="チョキ ">
+    <input type="button" id="btnP" onclick="myChoice(2)" value="パー ">
+  </form>
 </body>
 
 </html>
