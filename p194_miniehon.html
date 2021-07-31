@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript ミニミニ辞典</title>
+  <script type="text/javaScript" src="p194_miniehon.js"></script>
+</head>
+
+<body onload="load_data('1')">
+
+  <!-- タブの見出し部分 -->
+  <div style="cursor:pointer;">
+    <span id="td_1" onclick="load_data('1')">Window</span>
+    <span id="td_2" onclick="load_data('2')">Document</span>
+    <span id="td_3" onclick="load_data('3')">History</span>
+  </div>
+  <!-- タブの中身 -->
+  <div style="background-color:#AABBBB; padding:4px; width:300px;">
+    <hr>
+    <span id="div_index_list" style="vertical-align:top;"></span>
+    <textarea id="contents" rows="7" style="vertical-align:top;"></textarea>
+  </div>
+</body>
+
+</html>
