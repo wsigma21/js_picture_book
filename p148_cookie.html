@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="p148_cookie.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <form name="f1">
+    <input type="text" name="InputData">
+    <input type="button" value="クッキーに保存" onclick="setCookie('Data1', document.f1.InputData.value, 5)">
+    <input type="button" value="クッキーから取得" onclick="getCookie('Data1')">
+    <input type="button" value="クッキーから削除" onclick="clearCookie('Data1')">
+  </form>
+</body>
+
+</html>
